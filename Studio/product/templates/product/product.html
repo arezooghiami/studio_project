@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block contant %}
+    <h1>قابل سفارش</h1>
+
+        {% for cat in category %}
+            <a href="{% url 'product:category' cat.slug cat.id %}">
+{#            <a href="{{ cat.get_absolute_url}}">#}
+                <div>
+            <h1>{{ cat.name }}</h1>
+                </div>
+{#                <img src="{{ cat.image.url }}" style="width: 200px">#}
+            </a>
+        {% endfor %}
+
+{% endblock %}

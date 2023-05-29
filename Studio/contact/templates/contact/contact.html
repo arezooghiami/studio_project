@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block contant %}
+    <form method="post">
+                 {% csrf_token %}
+                  {{ contact_form}}
+                  <button type="submit">get-in-touch</button>
+    </form>
+{#<form method="post">#}
+{#    {% csrf_token %}#}
+{#    <div class="col-md-6 content-us">#}
+{#        <div class="contact-form" id="contact">#}
+{#            <h3 class="text-uppercase">Contact me</h3>#}
+{#            <input type="text" class="form-control" placeholder="نام.نام خانوادگی">#}
+{#            <input type="text" class="form-control" placeholder="شماره تلفن">#}
+{#            <textarea class="form-control" placeholder="Your Message"></textarea>#}
+{#            <button type="submit">Send</button>#}
+{#        </div>#}
+{#    </div>#}
+{#</form>#}
+{% endblock %}

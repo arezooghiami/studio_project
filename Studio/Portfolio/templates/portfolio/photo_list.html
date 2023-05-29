@@ -1,0 +1,77 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block contant %}
+
+	<!-- Start slides -->
+
+	<!-- End slides -->
+
+	<!-- Start About -->
+
+
+	<!-- End About -->
+
+	<!-- Start QT -->
+
+	<!-- End QT -->
+
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>نمونه کار ها</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="special-menu text-center">
+						<div class="button-group filter-button-group">
+							<button class="active" data-filter="*">All</button>
+							<button data-filter=".portrait">پرتره</button>
+                            <button data-filter=".studio">آتلیه</button>
+							<button data-filter=".adv">تبلیغاتی</button>
+							<button data-filter=".کودک">کودک</button>
+                            <button data-filter=".تولد">تولد</button>
+                            <button data-filter=".outdoor">فضای باز</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <div class="row special-list">
+                {% for ph in photos %}
+
+                        <div class="col-lg-4 col-md-6 special-grid {{ ph.type_photo }}">
+                            <div class="gallery-single fix">
+                                <img src="{{ ph.photo.url }}" class="img-fluid" alt="Image" style="height: 300px">
+                                <div class="why-text">
+                                    <small>{{ ph.type_photo }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+	<!-- End Menu -->
+
+	<!-- Start Gallery -->
+
+	<!-- End Gallery -->
+
+	<!-- Start Customer Reviews -->
+
+	<!-- End Customer Reviews -->
+
+	<!-- Start Contact info -->
+
+	<!-- End Contact info -->
+{% endblock %}

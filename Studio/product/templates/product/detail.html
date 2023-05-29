@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+
+{% block contant %}
+    <div class="container">
+        <div class="row">
+            <img src="{{ product.image.url }}" width="200" height="300">
+            <p>{{ product.information }}</p>
+        <br>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for data in variant %}
+            <input type="radio" value="{{ data.id }}"
+                    {% if variants.id == data.id %} checked {% endif %}
+                   name="select" onchange="this.form.submit()">
+            <a href="" style="text-decoration: none">{{ data.size_variant }}</a>
+        {% endfor %}
+    </form>
+        <br>
+        <div>
+            <h4>Your Choice : {{ variants.size_variant }} &nbsp;&nbsp; price:{{ variants.unit_price }}</h4>
+        </div>
+        <hr>
+    </div>
+    </div>
+
+{% endblock %}

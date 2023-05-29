@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %} product Page {% endblock %}
+{% block contant %}
+
+     {% for product in products %}
+                    <a href="{% url 'product:detail' product.id %}">
+                        <h2>{{ product.name }}</h2>
+                        <img src="{{ product.image.url }}" style="width: 250px" alt="{{ product.name }}"#}
+                             title="{{ product.name }}">
+                    </a>
+                    {% if product.discount %}
+                        <h4 style="text-decoration: line-through">{{ product.unit_price }}</h4>
+                        <h3>{{ product.total_price }}</h3>
+                    {% else %}
+                        <h3>شروع قیمت :{{ product.total_price }} </h3>
+                    {% endif %}
+
+
+                {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+  Girly by FreeHTML5.co
+  Twitter: https://twitter.com/fh5co
+  Facebook: https://fb.com/fh5co
+  URL: https://freehtml5.co
+-->
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <title>Girly</title>
+</head>
+<!--hheader-->
+    {% include "partials/_header.html" %}
+<!--hheader-->
+{% include 'message.html' %}
+{% block contant %}
+
+
+{% endblock %}
+	<!-- Start Footer -->
+     {% include "partials/_footer.html" %}
+
+	<!-- End Footer -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'assets/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!-- ALL PLUGINS -->
+<script src="{% static 'assets/js/jquery.superslides.min.js' %}"></script>
+<script src="{% static 'assets/js/images-loded.min.js' %}"></script>
+<script src="{% static 'assets/js/isotope.min.js' %}"></script>
+<script src="{% static 'assets/js/baguetteBox.min.js' %}"></script>
+<script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+<script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+</html>

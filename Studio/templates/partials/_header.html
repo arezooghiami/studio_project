@@ -1,0 +1,90 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md  fixed-top maine-menu">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse">
+            <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span></button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active"><a class="nav-link" href="{% url 'home:photo_list' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'product:all_product' %}" tabindex="-1"
+                                        aria-disabled="true">همه محصولات</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'Portfolio:photo_list' %}" tabindex="-1"
+                                        aria-disabled="true">نمونه کار</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'product:product' %}" tabindex="-1"
+                                        aria-disabled="true">قیمت ها </a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'blog:blog_list' %}" tabindex="-1"
+                                        aria-disabled="true">آموزشی</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact:contact' %}" tabindex="-1" aria-disabled="true">ارتباط با ما</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}" tabindex="-1"
+                                            aria-disabled="true">logout</a></li>
+                {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:register' %}" tabindex="-1"
+                                            aria-disabled="true">register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}" tabindex="-1"
+                                            aria-disabled="true">login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="container-fluid fh5co-home-banner">
+    <div class="card"> <img class="card-img" src="{% static 'assets/img/banner-img.jpg' %}" alt="">
+      <div class="card-img-overlay">
+        <div class="center-text">
+          <h2 class="card-title">A camera is the save button
+          for the mind’s eye</h2>
+          <a href="#" class="btn">
+            <svg width="201" height="51" viewBox="0 0 201 51">
+              <defs>
+                <style>
+                .cls-1 {
+                  fill: none;
+                  stroke-width: 1px;
+                  stroke: url(#linear-gradient);
+                }
+              </style>
+              <linearGradient id="linear-gradient" x1="140.508" y1="50.5" x2="60.492" y2="0.5" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#e90e65"/>
+                <stop offset="1" stop-color="#fff"/>
+              </linearGradient>
+            </defs>
+            <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" x="0.5" y="0.5" width="200" height="50" rx="25" ry="25"/>
+          </svg>
+        Explore</a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid fh5co-two-img">
+    <div class="row">
+      <div class="col-sm-6 pr-0 pl-0">
+        <div class="card"> <img class="card-img" src="{% static 'assets/img/girl1.jpg' %}" alt="">
+          <div class="card-img-overlay"> </div>
+        </div>
+      </div>
+      <div class="col-sm-6 pr-0 pl-0">
+        <div class="card"> <img class="card-img" src="{% static 'assets/img/girl2.jpg' %}" alt="">
+          <div class="card-img-overlay"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container contact-pop">
+      <div class="row">
+        <div class="col-md-6  pr-0">
+          <div class="card"> <img class="card-img w-100" src="{% static 'assets/img/girl3.jpg' %}" alt="">
+            <div class="card-img-overlay"> </div>
+          </div>
+        </div>
+        <div class="col-md-6 pl-0" id="about">
+          <div class="content">
+            <h3>Azadeh ghiami studio</h3>
+            <h4>Professional photographer</h4>
+            <hr />
+            <p>به وبیاست من خوش اومدین ،من بیش از ۱۰ سال سایفه کا دارم و میتونم کاری کنم بهترین عکسارو داشته باشی.</p>
+            <a href="{% url 'contact:contact' %}" class="btn">CONTACT</a> </div>
+          </div>
+        </div>
+      </div>

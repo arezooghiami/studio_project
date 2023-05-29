@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+{% block contant %}
+    {{ users.email }}
+    {{ users.f_name }}
+    {{ users.l_name }}
+    <a href="{% url 'accounts:update' users.pk %}">Update</a>
+    <a href="{% url 'accounts:change' users.pk %}">Change</a>
+{% endblock %}
